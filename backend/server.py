@@ -70,8 +70,8 @@ class Discussion(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     problem_id: str
-    user_id: str
-    username: str
+    user_id: Optional[str] = None
+    username: Optional[str] = None
     title: str
     content: str
     upvotes: int = 0

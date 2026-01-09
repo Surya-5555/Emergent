@@ -1,0 +1,154 @@
+{
+  "identity": {
+    "persona": "E1",
+    "philosophy": "Anti-AI, Fusion over Imitation, Emotion First",
+    "tone": "High-Performance, Flow State, Professional, Tech-forward"
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Chivo",
+        "weights": ["300", "900"],
+        "usage": "Headings, Hero Text, Big Numbers"
+      },
+      "body": {
+        "family": "Manrope",
+        "weights": ["400", "500", "600"],
+        "usage": "Paragraphs, UI Elements, Inputs"
+      },
+      "code": {
+        "family": "JetBrains Mono",
+        "weights": ["400", "500"],
+        "usage": "Code Editor, Snippets, Terminal"
+      }
+    },
+    "rules": [
+      "Headings > 32px must use tracking-tight",
+      "Overlines must be Uppercase + tracking-widest + text-xs",
+      "Never use Inter for headings",
+      "Use font-light for large display text to create elegance"
+    ]
+  },
+  "colors": {
+    "theme": "dark",
+    "palette": {
+      "background": {
+        "default": "#09090B",
+        "paper": "#18181B",
+        "subtle": "#27272A"
+      },
+      "primary": {
+        "main": "#6366F1",
+        "hover": "#4F46E5",
+        "foreground": "#FFFFFF"
+      },
+      "accent": {
+        "success": "#10B981",
+        "warning": "#F59E0B",
+        "error": "#F43F5E",
+        "info": "#0EA5E9"
+      },
+      "text": {
+        "primary": "#FAFAFA",
+        "secondary": "#A1A1AA",
+        "muted": "#52525B"
+      }
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500",
+      "glow": "bg-gradient-to-b from-white/10 to-transparent"
+    },
+    "rules": [
+      "Never use pure black (#000000)",
+      "Use zinc-950 (#09090B) as the darkest shade",
+      "Borders should be subtle: border-white/10",
+      "Glassmorphism: bg-black/40 backdrop-blur-xl border-white/10"
+    ]
+  },
+  "layout": {
+    "grid_systems": {
+      "marketing": {
+        "name": "The Tetris Grid",
+        "classes": "grid grid-cols-1 md:grid-cols-12 gap-8",
+        "rules": "Asymmetry is key. Use col-span-7 vs col-span-5. Never 50/50."
+      },
+      "dashboard": {
+        "name": "The Control Room",
+        "classes": "grid grid-cols-1 md:grid-cols-4 gap-4",
+        "rules": "Dense. Every pixel utilized. No jagged bottoms."
+      }
+    },
+    "spacing": {
+      "scale": ["p-4", "p-8", "p-12", "p-16", "p-24", "p-32"],
+      "rule": "Use 2x more spacing than typical designs. Containers with borders must have p-6 or p-8."
+    }
+  },
+  "components": {
+    "cards": {
+      "style": "Tracing Beam or Grid Borders",
+      "classes": "bg-zinc-900/50 border border-white/10 hover:border-indigo-500/50 transition-colors duration-300"
+    },
+    "buttons": {
+      "primary": "bg-indigo-600 hover:bg-indigo-700 text-white rounded-md px-6 py-3 font-medium transition-all hover:scale-105 active:scale-95",
+      "secondary": "bg-white/10 hover:bg-white/20 text-white rounded-md px-6 py-3 backdrop-blur-sm"
+    },
+    "inputs": {
+      "style": "Minimalist",
+      "classes": "bg-zinc-950 border-zinc-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 rounded-md h-10"
+    },
+    "navigation": {
+      "style": "Glassmorphism",
+      "classes": "fixed top-0 w-full z-50 bg-black/50 backdrop-blur-xl border-b border-white/5"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1737505599162-d9932323a889",
+        "description": "Abstract neon network nodes, perfect for hero section background with overlay"
+      },
+      {
+        "category": "feature_mock_interview",
+        "url": "https://images.pexels.com/photos/5496467/pexels-photo-5496467.jpeg",
+        "description": "Programmer in dark room, focused, for Mock Interview feature"
+      },
+      {
+        "category": "feature_contest",
+        "url": "https://images.unsplash.com/photo-1760978632014-f799595497af",
+        "description": "Wavy metallic surface, abstract representation of flow and leaderboards"
+      },
+      {
+        "category": "feature_coding",
+        "url": "https://images.unsplash.com/photo-1684488624316-774ea1824d97",
+        "description": "Man sitting in front of laptop, coding context"
+      }
+    ],
+    "icons": {
+      "primary": "lucide-react",
+      "secondary": "iconoir-react",
+      "instructions": "Use Lucide for standard UI (menu, user, settings). Use Iconoir for feature-specific icons (code, cpu, network) to add character."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "rules": [
+      "No 'transition: all'",
+      "Use spring animations for interactions",
+      "Stagger children animations for lists",
+      "Page transitions: Opacity + slight Y-axis shift"
+    ]
+  },
+  "universal_guidelines": [
+    "Do not use 'Inter' for headings.",
+    "Do not use gradients for text unless it's a very specific hero title.",
+    "Dark mode is the default. Do not create a light mode unless requested.",
+    "Use 'sonner' for toasts.",
+    "Use 'shadcn/ui' components but customize the styling to match the 'E1' aesthetic (remove rounded-xl, use rounded-md or rounded-none).",
+    "All interactive elements must have data-testid.",
+    "Use .js/.jsx extension for files as per project setup.",
+    "Avoid 'AI slop' - generic centered layouts. Use asymmetry.",
+    "Code editor must look like a real IDE (VS Code style) - dark theme, line numbers, minimap (optional)."
+  ],
+  "instructions_to_main_agent": "You are building a Competitive Programming Platform. Focus on the 'Flow State'. The UI should feel invisible when coding, but inspiring when browsing. Use the provided image URLs for the landing page. Implement the 'Control Room' grid for the dashboard. Use 'JetBrains Mono' for all code-related text. Ensure high contrast for syntax highlighting."
+}
